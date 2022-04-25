@@ -5,9 +5,13 @@ import lifeGameConfig from './config/lifeGameConfig.json'
 function App() {
 
 
-  return <div>
-    <Life dimension={lifeGameConfig.dimension} ticInterval={lifeGameConfig.tic}></Life>
-  </div>
+  return  <div>
+    <Life dimension={lifeGameConfig.dimension} ticInterval={lifeGameConfig.tic} ></Life>
+    <br></br> <br></br> <br></br>
+    <Life dimension={lifeGameConfig.dimension} ticInterval={lifeGameConfig.tic} ></Life>
+
+    
+    </div>
 }
 
 export default App;

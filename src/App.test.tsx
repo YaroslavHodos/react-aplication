@@ -1,9 +1,25 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import LifeMatrix from './service/LifeMatrix';
+const numbersInitial = [
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 1, 1, 1, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+];
+const numbersStep1 = [
+  [0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0],
+];
+const numbersStep2 = numbersInitial;
+const lifeMatrix = new LifeMatrix(numbersInitial)
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('life game nextStep 1', () => {
+  expect(lifeMatrix.nextStep()).toEqual(numbersStep1);
 });
+test('life game nextStep 2', () => {
+  expect(lifeMatrix.nextStep()).toEqual(numbersStep2);
+  });

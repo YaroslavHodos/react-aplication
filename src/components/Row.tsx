@@ -11,7 +11,7 @@ function getStyle(cellValue:number): React.CSSProperties {
         backgroundColor: !!cellValue ? 'black' : 'white',
         width: size,
         height: size,
-        border: '1 solid gray'
+        border: '1px solid gray'
     }
 }
 
